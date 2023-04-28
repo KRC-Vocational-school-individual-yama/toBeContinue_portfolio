@@ -61,7 +61,7 @@ void hitkey() {
 	if (CheckHitKey(KEY_INPUT_RETURN) == 1) {
 		tobecontinueinit();
 	}
-	if (CheckHitKey(KEY_INPUT_NUMPAD4) == 1&&musicflag==0) {
+	if ((CheckHitKey(KEY_INPUT_NUMPAD4)|CheckHitKey(KEY_INPUT_4)) == 1 && musicflag == 0) {
 		musicflag = 1;
 		PlaySoundMem(musicimg, DX_PLAYTYPE_BACK);
 	}
@@ -73,7 +73,7 @@ void hitkey() {
 }
 void tobecontinueupdete() {
 	hitkey();
-	if (CheckHitKey(KEY_INPUT_NUMPAD4) == 1) {
+	if ((CheckHitKey(KEY_INPUT_NUMPAD4) | CheckHitKey(KEY_INPUT_4)) == 1) {
 		zi[0].flag = true;
 	}
 	if (zi[0].flag == true) {
